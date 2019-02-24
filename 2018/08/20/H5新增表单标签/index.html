@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>H5新增表单标签 | Smalllitchi</title>
+
+  
+  <meta name="author" content="Smalllitchi">
+  
+
+  
+  <meta name="description" content="H5新增表单标签">
+  
+
+  
+  
+  <meta name="keywords" content>
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="H5新增表单标签">
+
+  <meta property="og:site_name" content="Smalllitchi">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Smalllitchi" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Smalllitchi</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>H5新增表单标签</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/08/20/H5新增表单标签/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-08-19T16:00:00.000Z">
+          2018-08-20
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h1 id="H5新增表单标签"><a href="#H5新增表单标签" class="headerlink" title="H5新增表单标签"></a>H5新增表单标签</h1><h5 id="1-新增type属性"><a href="#1-新增type属性" class="headerlink" title="1.新增type属性"></a>1.新增type属性</h5><a id="more"></a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--默认提供了电子邮箱的完整验证--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--不能实现验证，作用实在移动端打开号码键盘--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"tel"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--验证并且要求输入合法的网址--&gt;</span></span><br><span class="line">网址：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--只能输入数字，不能输入其它类型--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--max:最大值</span></span><br><span class="line"><span class="comment">min:最小值</span></span><br><span class="line"><span class="comment">value:默认值--&gt;</span></span><br><span class="line">数字：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">min</span>=<span class="string">"50"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--搜索框，提供了更人性化的体验--&gt;</span></span><br><span class="line">搜索：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"search"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--范围--&gt;</span></span><br><span class="line">范围：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--拾色器--&gt;</span></span><br><span class="line">颜色：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--时间--&gt;</span></span><br><span class="line">时间：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"time"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--日期 年月日--&gt;</span></span><br><span class="line">日期：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"date"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--日期和时间--&gt;</span></span><br><span class="line">日期时间：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"datetime-local"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--月份--&gt;</span></span><br><span class="line">月份：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"month"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--星期--&gt;</span></span><br><span class="line">星期：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"week"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-表单新增的其它属性"><a href="#2-表单新增的其它属性" class="headerlink" title="2.表单新增的其它属性"></a>2.表单新增的其它属性</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--placeholder  提示文本--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--autofocus   自动获取焦点--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--autocomplete  自动完成  on:打开 off:关闭</span></span><br><span class="line"><span class="comment">前提条件：</span></span><br><span class="line"><span class="comment">1.必须成功提交过  提交后才会有记录</span></span><br><span class="line"><span class="comment">2.当前添加autocomplete属性的元素必须有name属性--&gt;</span></span><br><span class="line">用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"userName"</span> <span class="attr">placeholder</span>=<span class="string">"请输入用户名"</span> <span class="attr">autofocus</span> <span class="attr">autocomplete</span>=<span class="string">"on"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--required  必须填写--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--pattern  正则表达式匹配--&gt;</span></span><br><span class="line">    手机号：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"tel"</span> <span class="attr">required</span> <span class="attr">pattern</span>=<span class="string">"^(\+86)?\d&#123;10&#125;$"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--multiple  传入多个文件--&gt;</span></span><br><span class="line">    文件：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">multiple</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--在email中，multiple属性可以输入多个email地址，但是各个地址中间需要用“,”隔开--&gt;</span></span><br><span class="line">    邮箱：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">multiple</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="3-datalist标签"><a href="#3-datalist标签" class="headerlink" title="3.datalist标签"></a>3.datalist标签</h5><p>表单与datalist标签结合使用可以在让用户自己填写内容的同时还可以进行选择</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">list</span>=<span class="string">"datalist"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"datalist"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"javascript"</span> <span class="attr">label</span>=<span class="string">"做特效"</span>&gt;</span><span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"java"</span> <span class="attr">label</span>=<span class="string">"编程"</span>&gt;</span><span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"jQuery"</span> <span class="attr">label</span>=<span class="string">"js库"</span>&gt;</span><span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="4-keygen标签"><a href="#4-keygen标签" class="headerlink" title="4.keygen标签"></a>4.keygen标签</h5><p>keygen标签的主要作用是加密，生成公匙和私匙</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">加密：<span class="tag">&lt;<span class="name">keygen</span>&gt;</span><span class="tag">&lt;/<span class="name">keygen</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="5-output标签"><a href="#5-output标签" class="headerlink" title="5.output标签"></a>5.output标签</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--显示输出信息 不能修改  语义性强--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">output</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">output</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="6-进度条"><a href="#6-进度条" class="headerlink" title="6.进度条"></a>6.进度条</h5><p><strong>a.progress标签</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--max:最大值  value:当前值--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">progress</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">value</span>=<span class="string">"50"</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>b.meter标签</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--max:最大值 min:最小值 value:当前值</span></span><br><span class="line"><span class="comment">    high:规定的较高值  low:规定的较低值--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meter</span> <span class="attr">value</span>=<span class="string">"50"</span> <span class="attr">high</span>=<span class="string">"80"</span> <span class="attr">low</span>=<span class="string">"30"</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">min</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">meter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/H5/">H5</a>
+    </span>
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    <br>
+    
+    &copy; 2019 Smalllitchi
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>

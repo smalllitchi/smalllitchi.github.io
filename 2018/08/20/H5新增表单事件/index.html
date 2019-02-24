@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>H5新增表单事件 | Smalllitchi</title>
+
+  
+  <meta name="author" content="Smalllitchi">
+  
+
+  
+  <meta name="description" content="H5新增表单事件">
+  
+
+  
+  
+  <meta name="keywords" content>
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="H5新增表单事件">
+
+  <meta property="og:site_name" content="Smalllitchi">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Smalllitchi" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Smalllitchi</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>H5新增表单事件</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/08/20/H5新增表单事件/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-08-19T16:00:00.000Z">
+          2018-08-20
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h1 id="H5新增表单事件"><a href="#H5新增表单事件" class="headerlink" title="H5新增表单事件"></a>H5新增表单事件</h1><h5 id="1-oninput事件"><a href="#1-oninput事件" class="headerlink" title="1.oninput事件"></a>1.oninput事件</h5><p>当表单内容发生改变时就会触发该事件</p>
+<a id="more"></a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"uesename"</span> <span class="attr">id</span>=<span class="string">"username"</span>&gt;</span></span><br><span class="line">密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"pwd"</span> <span class="attr">id</span>=<span class="string">"pwd"</span> <span class="attr">pattern</span>=<span class="string">"\d&#123;6,12&#125;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"username"</span>).oninput=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">"表单内容改变了"</span>);</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure>
+<p>与onkeyup的区别：onkeyup事件只要键盘弹起就会触发该事件，而oninput事件只要表单内容改变就会触发该事件。</p>
+<h5 id="2-oninvalid事件"><a href="#2-oninvalid事件" class="headerlink" title="2.oninvalid事件"></a>2.oninvalid事件</h5><p>当验证不通过时触发该事件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"pwd"</span>).oninvalid=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">this</span>.setCustomValidity(<span class="string">"输入不正确"</span>);</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure>
+<p>setCustomValidity()方法用于设置表单验证不通过时的警告信息。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/H5/">H5</a>
+    </span>
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    <br>
+    
+    &copy; 2019 Smalllitchi
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>

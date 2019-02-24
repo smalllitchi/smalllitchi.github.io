@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Git + Github使用教程 | Smalllitchi</title>
+
+  
+  <meta name="author" content="Smalllitchi">
+  
+
+  
+  <meta name="description" content="Git + Github使用教程">
+  
+
+  
+  
+  <meta name="keywords" content>
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Git + Github使用教程">
+
+  <meta property="og:site_name" content="Smalllitchi">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Smalllitchi" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Smalllitchi</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Git + Github使用教程</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/09/14/Git + Github使用教程/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-09-13T16:00:00.000Z">
+          2018-09-14
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h1 id="Git-Github使用教程"><a href="#Git-Github使用教程" class="headerlink" title="Git + Github使用教程"></a>Git + Github使用教程</h1><h3 id="一、Git下载-Github使用"><a href="#一、Git下载-Github使用" class="headerlink" title="一、Git下载/Github使用"></a>一、Git下载/Github使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git官网：git-scm.com</span><br><span class="line">github官网：github.com</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="二、Git安装"><a href="#二、Git安装" class="headerlink" title="二、Git安装"></a>二、Git安装</h3><p>1、双击安装文件</p>
+<p>2、选择安装路径</p>
+<p>3、选择安装的组件（默认Next）</p>
+<p>4、是否要添加到开始菜单（默认Next）</p>
+<p>5、默认Next</p>
+<p>6、更改使用方式：选择Use Git from Git Bash only（只使用命令行方式）</p>
+<p>7、默认Next</p>
+<p>8、默认Next</p>
+<p>9、默认Next</p>
+<p>10、点击 - Install 安装</p>
+<p>11、取消勾选View Release Notes - 点击Finish</p>
+<p>12、验证是否安装成功：在电脑任意空白位置右键点击 - 出现 Git GUI Here 和 Git Bash Here 表示安装成功！</p>
+<h3 id="三、Git使用-每次输入一条语句按回车确定、无需使用任何结束符号"><a href="#三、Git使用-每次输入一条语句按回车确定、无需使用任何结束符号" class="headerlink" title="三、Git使用(每次输入一条语句按回车确定、无需使用任何结束符号)"></a>三、Git使用(每次输入一条语句按回车确定、无需使用任何结束符号)</h3><h5 id="（一）任意创建一个文件夹、用来存放仓库"><a href="#（一）任意创建一个文件夹、用来存放仓库" class="headerlink" title="（一）任意创建一个文件夹、用来存放仓库"></a>（一）任意创建一个文件夹、用来存放仓库</h5><p>例：F:\open_res</p>
+<h5 id="（二）初始化仓库（创建仓库）"><a href="#（二）初始化仓库（创建仓库）" class="headerlink" title="（二）初始化仓库（创建仓库）"></a>（二）初始化仓库（创建仓库）</h5><p>在open_res文件夹下，右键 - 选择Git Bash Here（在此处打开Git命令行窗口）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入初始化仓库语句：git init</span><br><span class="line">然后回车</span><br></pre></td></tr></table></figure>
+<p>当前文件夹下将会产生一个.git文件夹，这个文件夹存放着配置信息、不用管它</p>
+<h5 id="（三）配置用户信息"><a href="#（三）配置用户信息" class="headerlink" title="（三）配置用户信息"></a>（三）配置用户信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &apos;github用户名&apos;</span><br><span class="line">git config --global user.email &apos;github邮箱地址&apos;</span><br></pre></td></tr></table></figure>
+<h5 id="（四）查看个人配置信息"><a href="#（四）查看个人配置信息" class="headerlink" title="（四）查看个人配置信息"></a>（四）查看个人配置信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+<h5 id="（五）如何将工作区的文件添加到本地仓库？"><a href="#（五）如何将工作区的文件添加到本地仓库？" class="headerlink" title="（五）如何将工作区的文件添加到本地仓库？"></a>（五）如何将工作区的文件添加到本地仓库？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add 文件名.后缀                            //1、将文件添加到暂存区</span><br><span class="line">git add 文件夹名称/							// 将整个文件夹添加到暂存区</span><br><span class="line">git commit -m &apos;描述信息&apos;                       //2、将暂存区文件添加到本地仓库</span><br></pre></td></tr></table></figure>
+<h5 id="（六）如何将文件同步到github远程仓库？"><a href="#（六）如何将文件同步到github远程仓库？" class="headerlink" title="（六）如何将文件同步到github远程仓库？"></a>（六）如何将文件同步到github远程仓库？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone github上某个项目仓库的地址           //0、将github远程仓库的项目克隆到本地文件夹</span><br><span class="line">git add 文件名.后缀                           //1、将文件添加到暂存区</span><br><span class="line">git commit -m &apos;描述信息&apos;                      //2、将暂存区文件添加到本地仓库</span><br><span class="line">git push                                     //3、将本地仓库文件提交到远程仓库</span><br></pre></td></tr></table></figure>
+<h5 id="（七）其它语句"><a href="#（七）其它语句" class="headerlink" title="（七）其它语句"></a>（七）其它语句</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status                                   //获取文件状态</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/Git与Github/">Git与Github</a>
+    </span>
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    <br>
+    
+    &copy; 2019 Smalllitchi
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>
