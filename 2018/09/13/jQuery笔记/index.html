@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>jquery基础 | Smalllitchi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="jquery基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jquery基础">
+<meta property="og:url" content="http://yoursite.com/2018/09/13/jQuery笔记/index.html">
+<meta property="og:site_name" content="Smalllitchi">
+<meta property="og:description" content="jquery基础">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-24T12:42:38.503Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jquery基础">
+<meta name="twitter:description" content="jquery基础">
+  
+    <link rel="alternate" href="/atom.xml" title="Smalllitchi" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpeg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-jQuery笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      jquery基础
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2018/09/13/jQuery笔记/" class="article-date">
+  <time datetime="2018-09-12T16:00:00.000Z" itemprop="datePublished">2018-09-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jquery/">jquery</a>
+  </div>
+
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <h1 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h1><h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>1.jQuery是一Js库，免费的</p>
+<p>2.JavaScript库：把一些浏览器的兼容代码或者一些常用的函数封装在一个Js文件中，这个文件就叫做Js库</p>
+<p>3.jQuery特点：很好的解决了不同浏览器的兼容性问题，体积比较小（几百K），使用方便，插件丰富，开源</p>
+<a id="more"></a>
+<h3 id="二、jQuery对象与DOM对象的互转"><a href="#二、jQuery对象与DOM对象的互转" class="headerlink" title="二、jQuery对象与DOM对象的互转"></a>二、jQuery对象与DOM对象的互转</h3><h5 id="1-DOM对象转jQuery对象"><a href="#1-DOM对象转jQuery对象" class="headerlink" title="1.DOM对象转jQuery对象"></a>1.DOM对象转jQuery对象</h5><p>$(DOM对象)</p>
+<p>如：把文档DOM对象转jQuery对象</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"document"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="2-jQuery对象转DOM对象"><a href="#2-jQuery对象转DOM对象" class="headerlink" title="2.jQuery对象转DOM对象"></a>2.jQuery对象转DOM对象</h5><p>$()[0]或者$().get(0)</p>
+<p>如：把文档jQuery对象转DOM对象</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"document"</span>)[<span class="number">0</span>];</span><br><span class="line">$(<span class="string">"document"</span>).get(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></div>
+<p>注意：jQuery对象只能使用jQuery中的方法，不能使用DOM中的方法，DOM对象只能使用DOM中的方法，不能使用jQuery中的方法。如果DOM对象需要使用jQuery中的方法，要先转成jQuery对象，jQuery对象要使用DOM方法，要先转成DOM对象</p>
+<h3 id="三、四种页面加载的事件"><a href="#三、四种页面加载的事件" class="headerlink" title="三、四种页面加载的事件"></a>三、四种页面加载的事件</h3><h5 id="1-第一种"><a href="#1-第一种" class="headerlink" title="1.第一种"></a>1.第一种</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">window</span>).load(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"window"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p>此方法需要页面中的所有内容加载完毕后才执行，是四种方式中最慢的一个，下面三种方式都是等到基本元素加载完毕后执行。</p>
+<h5 id="2-第二种"><a href="#2-第二种" class="headerlink" title="2.第二种"></a>2.第二种</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jQuery(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"jquery"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<h5 id="3-第三种"><a href="#3-第三种" class="headerlink" title="3.第三种"></a>3.第三种</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"123"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p>写法简单，一般采用此种。</p>
+<h5 id="4-第四种"><a href="#4-第四种" class="headerlink" title="4.第四种"></a>4.第四种</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"document"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<h3 id="四、jQuery中常见的选择器"><a href="#四、jQuery中常见的选择器" class="headerlink" title="四、jQuery中常见的选择器"></a>四、jQuery中常见的选择器</h3><h5 id="1-ID选择器"><a href="#1-ID选择器" class="headerlink" title="1.ID选择器"></a>1.ID选择器</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取ID为btn的元素</span></span><br><span class="line">$(<span class="string">"#btn"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="2-标签选择器"><a href="#2-标签选择器" class="headerlink" title="2.标签选择器"></a>2.标签选择器</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取标签为p的元素--------&gt;一般获取多个</span></span><br><span class="line">$(<span class="string">"p"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="3-类选择器"><a href="#3-类选择器" class="headerlink" title="3.类选择器"></a>3.类选择器</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取应用了.cls样式的元素--------&gt;一般获取多个</span></span><br><span class="line">$(<span class="string">".cls"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="4-交集选择器"><a href="#4-交集选择器" class="headerlink" title="4.交集选择器"></a>4.交集选择器</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取应用了.cls样式的p元素</span></span><br><span class="line">$(<span class="string">"p.cls"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="5-并集选择器"><a href="#5-并集选择器" class="headerlink" title="5.并集选择器"></a>5.并集选择器</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//同时获取P元素和span元素</span></span><br><span class="line">$(<span class="string">"p,span"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="6-层级选择器"><a href="#6-层级选择器" class="headerlink" title="6.层级选择器"></a>6.层级选择器</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取p元素中所有的span元素--------&gt;后代选择器</span></span><br><span class="line">$(<span class="string">"p span"</span>);</span><br><span class="line"><span class="comment">//获取的是ID为dv的元素中的直接子代p元素-----&gt;直接子代选择器</span></span><br><span class="line">$(<span class="string">"#dv&gt;p"</span>);</span><br><span class="line"><span class="comment">//获取的是ID为dv的元素的后面的所有兄弟元素span</span></span><br><span class="line">$(<span class="string">"#dv~span"</span>);</span><br><span class="line"><span class="comment">//获取的是ID为dv的元素的后面的直接兄弟元素span</span></span><br><span class="line">$(<span class="string">"#dv+span"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="7-奇数选择器"><a href="#7-奇数选择器" class="headerlink" title="7.奇数选择器"></a>7.奇数选择器</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取Ul标签中为奇数的li</span></span><br><span class="line">$(ul&gt;li:odd);</span><br></pre></td></tr></table></figure></div>
+<h5 id="8-偶数选择器"><a href="#8-偶数选择器" class="headerlink" title="8.偶数选择器"></a>8.偶数选择器</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取Ul标签中为偶数的li</span></span><br><span class="line">$(<span class="string">"ul&gt;li:even"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="9-通过索引获取元素"><a href="#9-通过索引获取元素" class="headerlink" title="9.通过索引获取元素"></a>9.通过索引获取元素</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取Ul标签中特定索引处的li</span></span><br><span class="line">$(<span class="string">"ul&gt;li:eq(index)"</span>);</span><br></pre></td></tr></table></figure></div>
+<h3 id="五、设置元素样式"><a href="#五、设置元素样式" class="headerlink" title="五、设置元素样式"></a>五、设置元素样式</h3><h5 id="1-通过css-方法设置元素样式"><a href="#1-通过css-方法设置元素样式" class="headerlink" title="1.通过css()方法设置元素样式"></a>1.通过css()方法设置元素样式</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置ID为dv的元素的宽和高</span></span><br><span class="line">$(<span class="string">"#dv"</span>).css(<span class="string">"width"</span>,<span class="string">"200px"</span>);</span><br><span class="line">$(<span class="string">"#dv"</span>).css(<span class="string">"height"</span>,<span class="string">"100px"</span>);</span><br></pre></td></tr></table></figure></div>
+<p>2.通过类样式名字设置</p>
+<p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取ID为dv的元素并设置类样式.cls---------&gt;addClass()添加类样式</span></span><br><span class="line">$(<span class="string">"#dv"</span>).addClass(<span class="string">"cls"</span>);</span><br><span class="line"><span class="comment">//获取ID为dv的元素并移除类样式.cls---------&gt;removeClass()移除类样式</span></span><br><span class="line">$(<span class="string">"#dv"</span>).removeClass(<span class="string">"cls"</span>);</span><br><span class="line"><span class="comment">//获取ID为dv的元素并判断是否应用了名字为cls的类样式---------&gt;hasClass()方法，返回值为布尔型</span></span><br><span class="line">$(<span class="string">"#dv"</span>).hasClass(<span class="string">"cls"</span>);</span><br><span class="line"><span class="comment">//获取ID为dv的元素并切换类样式.cls------&gt;toggleClass()切换类样式</span></span><br><span class="line">$(<span class="string">"#dv"</span>).toggleClass(<span class="string">"cls"</span>);</span><br></pre></td></tr></table></figure></div>
+<h3 id="六、获取或设置元素属性值"><a href="#六、获取或设置元素属性值" class="headerlink" title="六、获取或设置元素属性值"></a>六、获取或设置元素属性值</h3><h5 id="1-val-方法获取或设置表单value值"><a href="#1-val-方法获取或设置表单value值" class="headerlink" title="1.val()方法获取或设置表单value值"></a>1.val()方法获取或设置表单value值</h5><p>例子：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取ID为btn的表单的value值</span></span><br><span class="line"><span class="keyword">var</span> value=$(<span class="string">"#btn).val();</span></span><br><span class="line"><span class="string">//设置ID为btn的表单的value值</span></span><br><span class="line"> $("#btn").val("按钮");</span><br></pre></td></tr></table></figure>
+<p>补充：为select下拉列表设置value值，结果是默认显示相应value值处的选项，例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"se"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"1"</span>&gt;</span>今<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"3"</span>&gt;</span>天<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"4"</span>&gt;</span>天<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"5"</span>&gt;</span>气<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"6"</span>&gt;</span>真<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"7"</span>&gt;</span>好<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#se"</span>).val(<span class="number">7</span>);<span class="comment">//默认显示value为7处的选项</span></span><br></pre></td></tr></table></figure></div>
+<h5 id="2-index-方法获取元素索引值"><a href="#2-index-方法获取元素索引值" class="headerlink" title="2.index()方法获取元素索引值"></a>2.index()方法获取元素索引值</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取Ul标签中li的索引值</span></span><br><span class="line"><span class="keyword">var</span> index=$(<span class="string">"ul&gt;li"</span>).index();</span><br></pre></td></tr></table></figure></div>
+<h5 id="3-text-方法获取或设置标签之间的文字内容"><a href="#3-text-方法获取或设置标签之间的文字内容" class="headerlink" title="3.text()方法获取或设置标签之间的文字内容"></a>3.text()方法获取或设置标签之间的文字内容</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取p中间的文字内容</span></span><br><span class="line"><span class="keyword">var</span> txt=$(<span class="string">"p"</span>).text();</span><br><span class="line"><span class="comment">//设置p中间的文字内容</span></span><br><span class="line">$(<span class="string">"p"</span>).text(<span class="string">"我是一个p标签"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="4-html-方法设置或获取标签之间的内容（包括里面的标签内容）"><a href="#4-html-方法设置或获取标签之间的内容（包括里面的标签内容）" class="headerlink" title="4.html()方法设置或获取标签之间的内容（包括里面的标签内容）"></a>4.html()方法设置或获取标签之间的内容（包括里面的标签内容）</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取ID为dv的元素之间的内容</span></span><br><span class="line"><span class="keyword">var</span> txt=$(<span class="string">"#dv"</span>).html();</span><br><span class="line"><span class="comment">//设置ID为dv的元素之间的内容</span></span><br><span class="line">$(<span class="string">"#dv"</span>).html(<span class="string">"&lt;p&gt;我是一个p标签&lt;/p&gt;"</span>);</span><br></pre></td></tr></table></figure></div>
+<h3 id="七、动画方法"><a href="#七、动画方法" class="headerlink" title="七、动画方法"></a>七、动画方法</h3><h5 id="1-show-和hidden-方法"><a href="#1-show-和hidden-方法" class="headerlink" title="1.show()和hidden()方法"></a>1.show()和hidden()方法</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*显示ID为dv的元素-------&gt;show(参数1，参数2) 参数1是时间，毫秒或者字符串的值：slow normal fast </span></span><br><span class="line"><span class="comment">*参数2：回调函数，当动画执行完毕后执行该函数   </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">$(<span class="string">"#dv"</span>).show(<span class="number">1000</span>);</span><br><span class="line"><span class="comment">/*隐藏ID为dv的元素-------&gt;show(参数1，参数2) 参数1是时间，毫秒或者字符串的值：slow normal fast </span></span><br><span class="line"><span class="comment">*参数2：回调函数，当动画执行完毕后执行该函数   </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">$(<span class="string">"#dv"</span>).hidden(<span class="number">1000</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="2-slideUp-方法和slideDown-方法"><a href="#2-slideUp-方法和slideDown-方法" class="headerlink" title="2.slideUp()方法和slideDown()方法"></a>2.slideUp()方法和slideDown()方法</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//滑入ID为dv的元素--------&gt;slideUp(参数1，参数2);两个参数同show()和hidden()方法</span></span><br><span class="line">$(<span class="string">"#dv"</span>).slideUp(<span class="number">1000</span>);</span><br><span class="line"><span class="comment">//滑出ID为dv的元素--------&gt;slideDown(参数1，参数2);两个参数同show()和hidden()方法</span></span><br><span class="line">$(<span class="string">"#dv"</span>).slideDown(<span class="number">1000</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="3-fadeIn-方法和fadeOut-方法"><a href="#3-fadeIn-方法和fadeOut-方法" class="headerlink" title="3.fadeIn()方法和fadeOut()方法"></a>3.fadeIn()方法和fadeOut()方法</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//淡入ID为dv的元素--------&gt;slideUp(参数1，参数2);两个参数同show()和hidden()方法</span></span><br><span class="line">$(<span class="string">"#dv"</span>).fadeIn(<span class="number">1000</span>);</span><br><span class="line"><span class="comment">//淡出ID为dv的元素--------&gt;slideUp(参数1，参数2);两个参数同show()和hidden()方法</span></span><br><span class="line">$(<span class="string">"#dv"</span>).fadeOut(<span class="number">1000</span>);</span><br></pre></td></tr></table></figure></div>
+<h3 id="八、元素创建的几种方式"><a href="#八、元素创建的几种方式" class="headerlink" title="八、元素创建的几种方式"></a>八、元素创建的几种方式</h3><p>例子：</p>
+<p>第一种</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个p元素,并添加到ID为dv的父元素中</span></span><br><span class="line"><span class="comment">//主动方式添加元素</span></span><br><span class="line">$(<span class="string">"&lt;p&gt;我是一个p标签&lt;/p&gt;"</span>).appendTo($(<span class="string">"#dv"</span>));</span><br><span class="line"><span class="comment">//被动方式添加元素</span></span><br><span class="line">$(<span class="string">"#dv"</span>).append($(<span class="string">"&lt;p&gt;我是一个p标签&lt;/p&gt;"</span>));</span><br></pre></td></tr></table></figure></div>
+<p>第二种</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个p元素,并添加到ID为dv的父元素中</span></span><br><span class="line">$(<span class="string">"#dv"</span>).html(<span class="string">"&lt;p&gt;我是一个p标签&lt;/p&gt;"</span>);</span><br></pre></td></tr></table></figure></div>
+<p>第三种</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个p元素,并添加到ID为dv的父元素的第一个子元素的前面</span></span><br><span class="line">$(<span class="string">"#dv"</span>).prepend($(<span class="string">"&lt;p&gt;我是一个p标签&lt;/p&gt;"</span>));</span><br><span class="line"><span class="comment">//创建一个p元素,并添加到ID为dv的元素前面，是该元素的上一个兄弟元素</span></span><br><span class="line">$(<span class="string">"#dv"</span>).before($(<span class="string">"&lt;p&gt;我是一个p标签&lt;/p&gt;"</span>));</span><br><span class="line"><span class="comment">//创建一个p元素,并添加到ID为dv的元素后面，是该元素的下一个兄弟元素</span></span><br><span class="line">$(<span class="string">"#dv"</span>).after($(<span class="string">"&lt;p&gt;我是一个p标签&lt;/p&gt;"</span>));</span><br></pre></td></tr></table></figure></div>
+<h3 id="九、移除元素的几种方式"><a href="#九、移除元素的几种方式" class="headerlink" title="九、移除元素的几种方式"></a>九、移除元素的几种方式</h3><h5 id="1-html-方法移除元素"><a href="#1-html-方法移除元素" class="headerlink" title="1.html()方法移除元素"></a>1.html()方法移除元素</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//移除ID为dv的元素中的所有子元素</span></span><br><span class="line">$(<span class="string">"#dv"</span>).html(<span class="string">""</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="2-empty-方法清空元素内容"><a href="#2-empty-方法清空元素内容" class="headerlink" title="2.empty()方法清空元素内容"></a>2.empty()方法清空元素内容</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//清空ID为dv的元素中的所有子元素的内容</span></span><br><span class="line">$(<span class="string">"#dv"</span>).empty();</span><br></pre></td></tr></table></figure></div>
+<h5 id="3-remove-方法移除元素"><a href="#3-remove-方法移除元素" class="headerlink" title="3.remove()方法移除元素"></a>3.remove()方法移除元素</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//移除ID为dv的元素------remove()方法，相当于自杀，谁调用此方法，谁就会被移除</span></span><br><span class="line">$(<span class="string">"#dv"</span>).remove();</span><br></pre></td></tr></table></figure></div>
+<h3 id="十、自定义属性"><a href="#十、自定义属性" class="headerlink" title="十、自定义属性"></a>十、自定义属性</h3><h5 id="1-attr-方法自定义属性"><a href="#1-attr-方法自定义属性" class="headerlink" title="1.attr()方法自定义属性"></a>1.attr()方法自定义属性</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//为div标签添加name属性，并设置其值为dv</span></span><br><span class="line">$(<span class="string">"div"</span>).attr(<span class="string">"name"</span>,<span class="string">"dv"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取div标签name属性值</span></span><br><span class="line">$(<span class="string">"div"</span>).attr(<span class="string">"name"</span>);</span><br></pre></td></tr></table></figure></div>
+<p>注意：attr()方法对表单的选中属性不太友好，如果要设置或获取表单的选中属性，可以用prop()方法.</p>
+<h5 id="2-移除自定义属性removeattr-属性名"><a href="#2-移除自定义属性removeattr-属性名" class="headerlink" title="2.移除自定义属性removeattr(属性名);"></a>2.移除自定义属性removeattr(属性名);</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"ck"</span>&gt;</span>羽毛球</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取复选框是否被选中</span></span><br><span class="line">$(<span class="string">"#ck"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log($(<span class="string">"#ck"</span>).prop(<span class="string">"checked"</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<h3 id="十一、获取或设置元素的宽和高"><a href="#十一、获取或设置元素的宽和高" class="headerlink" title="十一、获取或设置元素的宽和高"></a>十一、获取或设置元素的宽和高</h3><h5 id="width-方法和height-方法"><a href="#width-方法和height-方法" class="headerlink" title="width()方法和height()方法"></a>width()方法和height()方法</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取div标签的宽和高</span></span><br><span class="line"><span class="keyword">var</span> height=$(<span class="string">"div"</span>).height();</span><br><span class="line"><span class="keyword">var</span> width=$(<span class="string">"div"</span>).width();</span><br><span class="line"><span class="comment">//设置div标签的宽和高</span></span><br><span class="line">$(<span class="string">"div"</span>).width(<span class="string">"200px"</span>);</span><br><span class="line">$(<span class="string">"div"</span>).height(<span class="string">"100px"</span>);</span><br></pre></td></tr></table></figure></div>
+<h3 id="十二、获取或设置元素的left和top"><a href="#十二、获取或设置元素的left和top" class="headerlink" title="十二、获取或设置元素的left和top"></a>十二、获取或设置元素的left和top</h3><h5 id="1-offset-方法获取或设置元素的left和top-此方法返回的是一个对象"><a href="#1-offset-方法获取或设置元素的left和top-此方法返回的是一个对象" class="headerlink" title="1.offset()方法获取或设置元素的left和top,此方法返回的是一个对象"></a>1.offset()方法获取或设置元素的left和top,此方法返回的是一个对象</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取div标签的left和top值</span></span><br><span class="line"><span class="keyword">var</span> l=$(<span class="string">"div"</span>).offset().left;</span><br><span class="line"><span class="keyword">var</span> t=$(<span class="string">"div"</span>).offset().top;</span><br><span class="line"><span class="comment">//设置div标签的left和top值</span></span><br><span class="line">$(<span class="string">"div"</span>).offset(&#123;<span class="string">"left"</span>:<span class="string">"200px"</span>,<span class="string">"top"</span>:<span class="string">"100px"</span>&#125;);</span><br></pre></td></tr></table></figure></div>
+<h5 id="2-scrollTop和scrollLeft方法获取元素向上或向下卷曲出去的距离"><a href="#2-scrollTop和scrollLeft方法获取元素向上或向下卷曲出去的距离" class="headerlink" title="2.scrollTop和scrollLeft方法获取元素向上或向下卷曲出去的距离"></a>2.scrollTop和scrollLeft方法获取元素向上或向下卷曲出去的距离</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"div"</span>).scroll=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> l=$(<span class="string">"div"</span>).scrollLeft();</span><br><span class="line">  <span class="keyword">var</span> t=$(<span class="string">"div"</span>).scrollTop();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="十三、事件的绑定"><a href="#十三、事件的绑定" class="headerlink" title="十三、事件的绑定"></a>十三、事件的绑定</h3><h5 id="1-对象-事件名字"><a href="#1-对象-事件名字" class="headerlink" title="1.对象.事件名字"></a>1.对象.事件名字</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#btn"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"ul&gt;li:even"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"red"</span>);</span><br><span class="line">    $(<span class="string">"ul&gt;li:odd"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"green"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p>缺点：不能绑定多个相同的事件</p>
+<h5 id="2-bind-方法绑定"><a href="#2-bind-方法绑定" class="headerlink" title="2.bind()方法绑定"></a>2.bind()方法绑定</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#btn1"</span>).bind(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">   $(<span class="string">"#dv"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"red"</span>);</span><br><span class="line">&#125;).bind(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"green"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p>可以为同一事件源绑定多个相同的事件</p>
+<h5 id="3-delegate-为子元素绑定事件"><a href="#3-delegate-为子元素绑定事件" class="headerlink" title="3.delegate()为子元素绑定事件"></a>3.delegate()为子元素绑定事件</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#dv"</span>).delegate(<span class="string">"p"</span>,<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"green"</span>);</span><br><span class="line">    alert(<span class="string">"你好"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<h5 id="4-on-方法绑定事件（与delegate作用一样）"><a href="#4-on-方法绑定事件（与delegate作用一样）" class="headerlink" title="4.on()方法绑定事件（与delegate作用一样）"></a>4.on()方法绑定事件（与delegate作用一样）</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#dv"</span>).on(<span class="string">"click"</span>,<span class="string">"p"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"green"</span>);</span><br><span class="line">    alert(<span class="string">"你好"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<h3 id="十四、事件的解绑"><a href="#十四、事件的解绑" class="headerlink" title="十四、事件的解绑"></a>十四、事件的解绑</h3><p>用什么方式绑定的事件就用什么方式解绑！</p>
+<h5 id="1-bind-事件绑定的解绑———-gt-unbind"><a href="#1-bind-事件绑定的解绑———-gt-unbind" class="headerlink" title="1.bind()事件绑定的解绑———-&gt;unbind()"></a>1.bind()事件绑定的解绑———-&gt;unbind()</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>).bind(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"green"</span>);</span><br><span class="line">    alert(<span class="string">"你好"</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"p"</span>).unbind();</span><br></pre></td></tr></table></figure></div>
+<h5 id="2-delegate-事件绑定的解绑——–-gt-undelegate"><a href="#2-delegate-事件绑定的解绑——–-gt-undelegate" class="headerlink" title="2.delegate()事件绑定的解绑——–&gt;undelegate()"></a>2.delegate()事件绑定的解绑——–&gt;undelegate()</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#dv"</span>).delegate(<span class="string">"p"</span>,<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"green"</span>);</span><br><span class="line">    alert(<span class="string">"你好"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//解除ID为dv元素的所有子元素的事件绑定</span></span><br><span class="line">$(<span class="string">"#dv"</span>).undelegate();</span><br><span class="line"><span class="comment">//解除ID为dv元素的子元素p的事件绑定</span></span><br><span class="line">    $(<span class="string">"#dv"</span>).undelegate(<span class="string">"p"</span>);</span><br><span class="line"><span class="comment">//解除ID为dv元素的子元素p的点击事件的绑定</span></span><br><span class="line">    $(<span class="string">"#dv"</span>).undelegate(<span class="string">"p"</span>,<span class="string">"click"</span>);</span><br></pre></td></tr></table></figure></div>
+<h5 id="3-on方法事件绑定的解绑——-gt-off"><a href="#3-on方法事件绑定的解绑——-gt-off" class="headerlink" title="3.on方法事件绑定的解绑——-&gt;off()"></a>3.on方法事件绑定的解绑——-&gt;off()</h5><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#dv"</span>).on(<span class="string">"click"</span>,<span class="string">"p"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"green"</span>);</span><br><span class="line">    alert(<span class="string">"你好"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//解除父元素子元素的事件绑定</span></span><br><span class="line">$(<span class="string">"#dv"</span>).off();</span><br><span class="line"><span class="comment">//解除ID为dv元素的子元素p的事件绑定</span></span><br><span class="line">$(<span class="string">"#dv"</span>).off(<span class="string">"p"</span>);</span><br><span class="line"><span class="comment">//解除ID为dv元素的子元素p的点击事件的绑定</span></span><br><span class="line">$(<span class="string">"#dv"</span>).off(<span class="string">"click"</span>,<span class="string">"p"</span>);</span><br></pre></td></tr></table></figure></div>
+<h3 id="十五、事件冒泡和阻止事件冒泡"><a href="#十五、事件冒泡和阻止事件冒泡" class="headerlink" title="十五、事件冒泡和阻止事件冒泡"></a>十五、事件冒泡和阻止事件冒泡</h3><p>事件冒泡：有元素嵌套的时候，子元素的事件被触发，则该子元素外部的父元素相应的事件也会自动触发</p>
+<p>阻止事件冒泡：return false;</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dv1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dv2"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dv3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#dv1"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"div1"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"#dv2"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"div2"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"#dv3"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"div3"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<h3 id="十六、事件的触发"><a href="#十六、事件的触发" class="headerlink" title="十六、事件的触发"></a>十六、事件的触发</h3><p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"文本框获取焦点事件触发"</span> <span class="attr">id</span>=<span class="string">"btn1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"btn2"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">//第一种事件触发方式</span></span><br><span class="line">$(<span class="string">"#btn1"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"#btn2"</span>).focus();</span><br><span class="line">    $(<span class="string">"#btn2"</span>).next().text(<span class="string">"文本框获取焦点了"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//第二种事件触发方式</span></span><br><span class="line">    $(<span class="string">"#btn1"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        $(<span class="string">"#btn2"</span>).trigger(<span class="string">"focus"</span>);</span><br><span class="line">        $(<span class="string">"#btn2"</span>).next().text(<span class="string">"文本框获取焦点了"</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//第三种事件触发方式-------&gt;不会触发浏览器默认行为</span></span><br><span class="line">    $(<span class="string">"#btn1"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        $(<span class="string">"#btn2"</span>).triggerHandler(<span class="string">"focus"</span>);</span><br><span class="line">        $(<span class="string">"#btn2"</span>).next().text(<span class="string">"文本框获取焦点了"</span>);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></div>
+<h3 id="十七、事件的参数"><a href="#十七、事件的参数" class="headerlink" title="十七、事件的参数"></a>十七、事件的参数</h3><p>DOM中，谷歌和火狐浏览器在事件触发过程中默认有事件参数e传入，但IE8没有，jQuery解决了这一问题，所有浏览器在事件触发时都会有事件参数e传入，是一个对象。</p>
+<h5 id="事件对象的几个常用属性："><a href="#事件对象的几个常用属性：" class="headerlink" title="事件对象的几个常用属性："></a>事件对象的几个常用属性：</h5><p>e.stoppropagation()阻止事件冒泡——-&gt;或者用return false亦可</p>
+<p>e.button   鼠标按键的键值</p>
+<p>e.altKey     用户是否按下了alt键，返回值是布尔型</p>
+<p>e.ctrlKey    用户是否按下了ctrl键，返回值是布尔型</p>
+<p>e.shiftKey  用户是否按下了shift键，返回值是布尔型</p>
+<p>e.keyCode   用户按下的键盘的键的值</p>
+<p>e.target       触发该事件的目标对象</p>
+<p>e.currentTarget   触发该事件的当前对象</p>
+<p>e.delegateTarget   代理的对象</p>
+<h3 id="十八、链式编程"><a href="#十八、链式编程" class="headerlink" title="十八、链式编程"></a>十八、链式编程</h3><p><strong>原理</strong>：对象.方法（），调用方法后如果返回的仍然是当前这个对象，则可以继续调用其它方法。</p>
+<p>jQuery中调用方法，对象.方法名（）—–&gt;获取值      对象.方法名（值）——-&gt;返回的是一个对象</p>
+<h3 id="十九、包装集与多库共存"><a href="#十九、包装集与多库共存" class="headerlink" title="十九、包装集与多库共存"></a>十九、包装集与多库共存</h3><h5 id="1-包装集"><a href="#1-包装集" class="headerlink" title="1.包装集"></a>1.包装集</h5><p>包装集就是把获取的元素通过jQuery的方式进行包装，可以通过.length来判断页面中是否存在这个元素。</p>
+<p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="string">"btn"</span>).length!=<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="comment">//页面中存在这个元素</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"存在"</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">     <span class="comment">//页面中不存在这个元素</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"不存在"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h5 id="2-多库共存"><a href="#2-多库共存" class="headerlink" title="2.多库共存"></a>2.多库共存</h5><p>$这个符号如果被其它开发人员占用，则可以使用$.noConflict()释放权限。</p>
+<p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xy=$.noConflict();<span class="comment">//此时xy就相当于$，可以用xy封装对象，比如：xy("#btn)</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="二十、each方法"><a href="#二十、each方法" class="headerlink" title="二十、each方法"></a>二十、each方法</h3><p>虽然jQuery中默认进行了隐式迭代，但是若要对获取的元素进行不同的操作时，可以使用each方法。</p>
+<p>例子：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"div"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index,ele</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//参数1：索引  参数2：对象</span></span><br><span class="line">    $(ele).css(<span class="string">"width"</span>,<span class="string">"+index+"</span>+<span class="string">"px"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2018/09/14/Git + Github使用教程/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            Git + Github使用教程
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2018/09/06/存储数据与应用程序缓存/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">存储数据与应用程序缓存</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpeg" title="头像来自网络">
+    <h3 class="avatar-name">
+      
+        bytechats
+      
+    </h3>
+    <p class="avatar-slogan">
+      
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git与Github/">Git与Github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/H5/">H5</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jquery/">jquery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构与算法/">数据结构与算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/23/中缀表达式转后缀表达式/">中缀表达式转后缀表达式</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/14/Git + Github使用教程/">Git + Github使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/13/jQuery笔记/">jquery基础</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/06/存储数据与应用程序缓存/">存储数据与应用程序缓存</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/25/元素的拖拽/">元素的拖拽</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Smalllitchi &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
