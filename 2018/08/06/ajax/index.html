@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>ajax | Smalllitchi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="ajax">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ajax">
+<meta property="og:url" content="http://yoursite.com/2018/08/06/ajax/index.html">
+<meta property="og:site_name" content="Smalllitchi">
+<meta property="og:description" content="ajax">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-27T05:18:22.915Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ajax">
+<meta name="twitter:description" content="ajax">
+  
+    <link rel="alternate" href="/atom.xml" title="Smalllitchi" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpeg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-ajax" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      ajax
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2018/08/06/ajax/" class="article-date">
+  <time datetime="2018-08-05T16:00:00.000Z" itemprop="datePublished">2018-08-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ajax/">ajax</a>
+  </div>
+
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <h1 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h1><h3 id="一、ajax实现的步骤"><a href="#一、ajax实现的步骤" class="headerlink" title="一、ajax实现的步骤"></a>一、ajax实现的步骤</h3><h5 id="1-创建xhr对象"><a href="#1-创建xhr对象" class="headerlink" title="1.创建xhr对象"></a>1.创建xhr对象</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMlHttpRequest(); //标准浏览器</span><br><span class="line">var xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP); //ie6</span><br><span class="line">//兼容浏览器</span><br><span class="line">var xhr = null;</span><br><span class="line">if(Window.XMLHttpRequest)&#123;</span><br><span class="line">    xhr = new XMlHttpRequest(); </span><br><span class="line">&#125;else&#123;</span><br><span class="line">    xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<a id="more"></a>
+<h5 id="2-准备发送"><a href="#2-准备发送" class="headerlink" title="2.准备发送"></a>2.准备发送</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//参数3：如果为true,表示异步，false表示同步</span><br><span class="line">//注意：get请求的请求参数应该放在请求路径的后面</span><br><span class="line">//如果请求参数是中文，可以使用encodeURI()对参数进行编码，防止中文乱码</span><br><span class="line">xhr.open(&quot;请求的方式&quot;,&quot;请求的路径&quot;,true/false);</span><br></pre></td></tr></table></figure></div>
+<h5 id="3-发送请求"><a href="#3-发送请求" class="headerlink" title="3.发送请求"></a>3.发送请求</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//如果是get请求，参数为null</span><br><span class="line">xhr.send(null);</span><br><span class="line">//如果是post请求,需要设置请求头</span><br><span class="line">xhr.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line">//post请求参数如果是中文不需要通过encodeURI()进行编码</span><br><span class="line">xhr.send(param);</span><br></pre></td></tr></table></figure></div>
+<h5 id="4-指定回调函数"><a href="#4-指定回调函数" class="headerlink" title="4.指定回调函数"></a>4.指定回调函数</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">xhr.onstatechange = function()&#123;</span><br><span class="line">    if(xhr.readyState == 4)&#123;</span><br><span class="line">        //成功</span><br><span class="line">        if(xhr.status == 200)&#123;</span><br><span class="line">            console.log(xhr.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="二、xhr-readyState"><a href="#二、xhr-readyState" class="headerlink" title="二、xhr.readyState"></a>二、xhr.readyState</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0 xhr对象初始化</span><br><span class="line">1 发送请求</span><br><span class="line">2 服务器已经返回了数据</span><br><span class="line">3 数据正在解析</span><br><span class="line">4.数据解析完成，可以使用</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2018/08/20/H5新增表单事件/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            H5新增表单事件
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpeg" title="头像来自网络">
+    <h3 class="avatar-name">
+      
+        bytechats
+      
+    </h3>
+    <p class="avatar-slogan">
+      众里寻他千百度，蓦然回首，那人却在灯火阑珊处
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git与Github/">Git与Github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/H5/">H5</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jquery/">jquery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue/">vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构与算法/">数据结构与算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/10/小项目-品牌列表动画/">小项目-品牌列表动画</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/23/中缀表达式转后缀表达式/">中缀表达式转后缀表达式</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/14/Git + Github使用教程/">Git + Github使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/13/jQuery笔记/">jquery基础</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/06/存储数据与应用程序缓存/">存储数据与应用程序缓存</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Smalllitchi &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
