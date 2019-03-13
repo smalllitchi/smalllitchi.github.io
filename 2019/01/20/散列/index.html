@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>散列 | Smalllitchi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="散列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="散列">
+<meta property="og:url" content="http://yoursite.com/2019/01/20/散列/index.html">
+<meta property="og:site_name" content="Smalllitchi">
+<meta property="og:description" content="散列">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-13T12:38:01.121Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="散列">
+<meta name="twitter:description" content="散列">
+  
+    <link rel="alternate" href="/atom.xml" title="Smalllitchi" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpeg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-散列" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      散列
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/01/20/散列/" class="article-date">
+  <time datetime="2019-01-19T16:00:00.000Z" itemprop="datePublished">2019-01-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据结构与算法/">数据结构与算法</a>
+  </div>
+
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <h1 id="散列"><a href="#散列" class="headerlink" title="散列"></a>散列</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">//定义散列类</span><br><span class="line">function HashTable() &#123;</span><br><span class="line">    //散列表</span><br><span class="line">    //存放键</span><br><span class="line">    this.table=new Array(137);</span><br><span class="line">    //存放值</span><br><span class="line">    this.value=new Array(137);</span><br><span class="line">&#125;</span><br><span class="line">//定义散列函数</span><br><span class="line">HashTable.prototype.betterHsh=function (str) &#123;</span><br><span class="line">    const H=37;</span><br><span class="line">    var total=0;</span><br><span class="line">    for(var i=0;i&lt;str.length;i++)&#123;</span><br><span class="line">        total+=H*total+str.charCodeAt(i);</span><br><span class="line">    &#125;</span><br><span class="line">    total = total%this.table.length;</span><br><span class="line">    if(total&lt;0)&#123;</span><br><span class="line">        total=this.table.length-1;</span><br><span class="line">    &#125;</span><br><span class="line">    return parseInt(total);</span><br><span class="line">&#125;;</span><br><span class="line">//添加数据</span><br><span class="line">HashTable.prototype.put=function (key,value) &#123;</span><br><span class="line">    var pos=this.betterHsh(key);</span><br><span class="line">    this.table[pos]=key;</span><br><span class="line">    this.value[pos]=value;</span><br><span class="line">&#125;;</span><br><span class="line">//读取数据</span><br><span class="line">HashTable.prototype.get=function (key) &#123;</span><br><span class="line">    var pos=this.betterHsh(key);</span><br><span class="line">    return this.value[pos];</span><br><span class="line">&#125;;</span><br><span class="line">//显示所有数据</span><br><span class="line">HashTable.prototype.showAll=function () &#123;</span><br><span class="line">    var str=&quot;&quot;;</span><br><span class="line">    for(var i=0;i&lt;this.table.length;i++)&#123;</span><br><span class="line">        if(this.table[i]!=undefined)&#123;</span><br><span class="line">            str+=this.table[i]+&quot;:&quot;+this.value[i]+&quot;\n&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var dic=new HashTable();</span><br><span class="line">dic.put(&quot;name&quot;,&quot;名字&quot;);</span><br><span class="line">dic.put(&quot;age&quot;,&quot;年龄&quot;);</span><br><span class="line">dic.put(&quot;nature&quot;,&quot;大自然&quot;);</span><br><span class="line">console.log(dic.showAll());</span><br><span class="line">console.log(dic.get(&quot;name&quot;));</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/01/21/散列表碰撞问题解决之线性探测法/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            散列表碰撞问题解决之线性探测法
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/01/20/十进制转任意进制/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">十进制转任意进制</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpeg" title="头像来自网络">
+    <h3 class="avatar-name">
+      
+        bytechats
+      
+    </h3>
+    <p class="avatar-slogan">
+      众里寻他千百度，蓦然回首，那人却在灯火阑珊处
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git与Github/">Git与Github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/H5/">H5</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue/">vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构与算法/">数据结构与算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/25/集合/">集合</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/21/散列表碰撞问题解决之线性探测法/">散列表碰撞问题解决之线性探测法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/20/散列/">散列</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/20/十进制转任意进制/">十进制转任意进制</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/20/散列表碰撞问题解决之开链法/">散列表碰撞问题解决之开链法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Smalllitchi &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
