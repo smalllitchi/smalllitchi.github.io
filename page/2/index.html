@@ -51,6 +51,46 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-字典" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/20/字典/">字典</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2018/10/20/字典/" class="article-date">
+  <time datetime="2018-10-19T16:00:00.000Z" itemprop="datePublished">2018-10-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据结构与算法/">数据结构与算法</a>
+  </div>
+
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <h1 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">//定义字典类</span><br><span class="line">function Dictionary() &#123;</span><br><span class="line">    this.dataStore=new Array();</span><br><span class="line">&#125;</span><br><span class="line">//添加键值对</span><br><span class="line">Dictionary.prototype.add=function (key,value) &#123;</span><br><span class="line">    this.dataStore[key]=value;</span><br><span class="line">&#125;;</span><br><span class="line">//删除键值对</span><br><span class="line">Dictionary.prototype.remove=function (key) &#123;</span><br><span class="line">    delete this.dataStore[key];</span><br><span class="line">&#125;;</span><br><span class="line">//查找键值对</span><br><span class="line">Dictionary.prototype.find=function (key) &#123;</span><br><span class="line">    return this.dataStore[key];</span><br><span class="line">&#125;;</span><br><span class="line">//显示所有</span><br><span class="line">Dictionary.prototype.showAll=function () &#123;</span><br><span class="line">    var str=&quot;&quot;;</span><br><span class="line">    for(var key in this.dataStore)&#123;</span><br><span class="line">        str+=key+&quot;==&gt;&quot;+this.dataStore[key]+&quot;\n&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var dic=new Dictionary();</span><br><span class="line">dic.add(&quot;name&quot;,&quot;张三&quot;);</span><br><span class="line">dic.add(&quot;age&quot;,18);</span><br><span class="line">dic.add(&quot;hobby&quot;,&quot;睡觉&quot;);</span><br><span class="line">console.log(dic.showAll());</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-Git + Github使用教程" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -274,6 +314,47 @@
 </article>
 
   
+    <article id="post-双向链表" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/06/双向链表/">双向链表</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2018/09/06/双向链表/" class="article-date">
+  <time datetime="2018-09-05T16:00:00.000Z" itemprop="datePublished">2018-09-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据结构与算法/">数据结构与算法</a>
+  </div>
+
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <p>##### </p>
+<h1 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">//节点</span><br><span class="line">function Node(ele) &#123;</span><br><span class="line">    this.element=ele;</span><br><span class="line">    this.prev=null;</span><br><span class="line">    this.next=null;</span><br><span class="line">&#125;</span><br><span class="line">//双向链表</span><br><span class="line">function LList() &#123;</span><br><span class="line">    this.head=new Node(&apos;head&apos;);</span><br><span class="line">&#125;</span><br><span class="line">//查找节点</span><br><span class="line">LList.prototype.find=function (ele) &#123;</span><br><span class="line">    var current=this.head;</span><br><span class="line">    while (current.element!==ele)&#123;</span><br><span class="line">        current=current.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return current;</span><br><span class="line">&#125;;</span><br><span class="line">//插入节点</span><br><span class="line">LList.prototype.insert=function (newElement,item) &#123;</span><br><span class="line">    var newNode=new Node(newElement);</span><br><span class="line">    var current=this.find(item);</span><br><span class="line">    newNode.next=current.next;</span><br><span class="line">    newNode.prev=current;</span><br><span class="line">    current.next=newNode;</span><br><span class="line">&#125;;</span><br><span class="line">//删除节点</span><br><span class="line">LList.prototype.remove=function (ele) &#123;</span><br><span class="line">    var current=this.find(ele);</span><br><span class="line">    if(current.next!==null)&#123;</span><br><span class="line">        current.prev.next=current.next;</span><br><span class="line">        current.next.prev=current.prev;</span><br><span class="line">        current.prev=null;</span><br><span class="line">        current.next=null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">//显示链表中的所有元素</span><br><span class="line">LList.prototype.display=function () &#123;</span><br><span class="line">    var current=this.head;</span><br><span class="line">    var str=&quot;&quot;;</span><br><span class="line">    while (current.next!==null)&#123;</span><br><span class="line">        str+=current.next.element;</span><br><span class="line">        current=current.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var cities=new LList();</span><br><span class="line">cities.insert(&apos;conway&apos;,&apos;head&apos;);</span><br><span class="line">cities.insert(&apos;RusseLLville&apos;,&apos;conway&apos;);</span><br><span class="line">cities.insert(&apos;Carlisle&apos;,&apos;RusseLLville&apos;);</span><br><span class="line">cities.insert(&apos;Alma&apos;,&apos;Carlisle&apos;);</span><br><span class="line">console.log(cities.display());</span><br><span class="line">cities.remove(&apos;Carlisle&apos;);</span><br><span class="line">console.log(cities.display());</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-存储数据与应用程序缓存" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -323,47 +404,6 @@
 <h3 id="三、应用程序缓存"><a href="#三、应用程序缓存" class="headerlink" title="三、应用程序缓存"></a>三、应用程序缓存</h3><p>使用应用程序缓存可以有选择性地缓存一些数据，即使在断网的情况下，用户也能够看到界面</p>
 <div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/1.jpg"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/2.jpg"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/3.jpg"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/5.jpg"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
 <div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">CACHE MANIFEST</span><br><span class="line">#上面一句必写，且应放在开头第一句</span><br><span class="line">#后面是注释</span><br><span class="line"></span><br><span class="line">#需要缓存的文件清单列表</span><br><span class="line">CACHE:</span><br><span class="line"></span><br><span class="line">../images/1.jpg</span><br><span class="line">../images/5.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#每一次都需要向服务器请求的文件清单列表</span><br><span class="line">NETWORK:</span><br><span class="line"></span><br><span class="line">../images/2.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#当文件不存在时，替代文件列表</span><br><span class="line">FALLBACK:</span><br><span class="line">../images/3.jpg ../images/6.jpg</span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-双向链表" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/06/双向链表/">双向链表</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2018/09/06/双向链表/" class="article-date">
-  <time datetime="2018-09-05T16:00:00.000Z" itemprop="datePublished">2018-09-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/数据结构与算法/">数据结构与算法</a>
-  </div>
-
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-doorframe" itemprop="articleBody">
-      
-        <p>##### </p>
-<h1 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">//节点</span><br><span class="line">function Node(ele) &#123;</span><br><span class="line">    this.element=ele;</span><br><span class="line">    this.prev=null;</span><br><span class="line">    this.next=null;</span><br><span class="line">&#125;</span><br><span class="line">//双向链表</span><br><span class="line">function LList() &#123;</span><br><span class="line">    this.head=new Node(&apos;head&apos;);</span><br><span class="line">&#125;</span><br><span class="line">//查找节点</span><br><span class="line">LList.prototype.find=function (ele) &#123;</span><br><span class="line">    var current=this.head;</span><br><span class="line">    while (current.element!==ele)&#123;</span><br><span class="line">        current=current.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return current;</span><br><span class="line">&#125;;</span><br><span class="line">//插入节点</span><br><span class="line">LList.prototype.insert=function (newElement,item) &#123;</span><br><span class="line">    var newNode=new Node(newElement);</span><br><span class="line">    var current=this.find(item);</span><br><span class="line">    newNode.next=current.next;</span><br><span class="line">    newNode.prev=current;</span><br><span class="line">    current.next=newNode;</span><br><span class="line">&#125;;</span><br><span class="line">//删除节点</span><br><span class="line">LList.prototype.remove=function (ele) &#123;</span><br><span class="line">    var current=this.find(ele);</span><br><span class="line">    if(current.next!==null)&#123;</span><br><span class="line">        current.prev.next=current.next;</span><br><span class="line">        current.next.prev=current.prev;</span><br><span class="line">        current.prev=null;</span><br><span class="line">        current.next=null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">//显示链表中的所有元素</span><br><span class="line">LList.prototype.display=function () &#123;</span><br><span class="line">    var current=this.head;</span><br><span class="line">    var str=&quot;&quot;;</span><br><span class="line">    while (current.next!==null)&#123;</span><br><span class="line">        str+=current.next.element;</span><br><span class="line">        current=current.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var cities=new LList();</span><br><span class="line">cities.insert(&apos;conway&apos;,&apos;head&apos;);</span><br><span class="line">cities.insert(&apos;RusseLLville&apos;,&apos;conway&apos;);</span><br><span class="line">cities.insert(&apos;Carlisle&apos;,&apos;RusseLLville&apos;);</span><br><span class="line">cities.insert(&apos;Alma&apos;,&apos;Carlisle&apos;);</span><br><span class="line">console.log(cities.display());</span><br><span class="line">cities.remove(&apos;Carlisle&apos;);</span><br><span class="line">console.log(cities.display());</span><br></pre></td></tr></table></figure></div>
-
       
     </div>
     
@@ -602,50 +642,6 @@
 </article>
 
   
-    <article id="post-ajax" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/ajax/">ajax</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2018/08/06/ajax/" class="article-date">
-  <time datetime="2018-08-05T16:00:00.000Z" itemprop="datePublished">2018-08-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/ajax/">ajax</a>
-  </div>
-
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-doorframe" itemprop="articleBody">
-      
-        <h1 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h1><h3 id="一、ajax实现的步骤"><a href="#一、ajax实现的步骤" class="headerlink" title="一、ajax实现的步骤"></a>一、ajax实现的步骤</h3><h5 id="1-创建xhr对象"><a href="#1-创建xhr对象" class="headerlink" title="1.创建xhr对象"></a>1.创建xhr对象</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMlHttpRequest(); //标准浏览器</span><br><span class="line">var xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP); //ie6</span><br><span class="line">//兼容浏览器</span><br><span class="line">var xhr = null;</span><br><span class="line">if(Window.XMLHttpRequest)&#123;</span><br><span class="line">    xhr = new XMlHttpRequest(); </span><br><span class="line">&#125;else&#123;</span><br><span class="line">    xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h5 id="2-准备发送"><a href="#2-准备发送" class="headerlink" title="2.准备发送"></a>2.准备发送</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//参数3：如果为true,表示异步，false表示同步</span><br><span class="line">//注意：get请求的请求参数应该放在请求路径的后面</span><br><span class="line">//如果请求参数是中文，可以使用encodeURI()对参数进行编码，防止中文乱码</span><br><span class="line">xhr.open(&quot;请求的方式&quot;,&quot;请求的路径&quot;,true/false);</span><br></pre></td></tr></table></figure></div>
-<h5 id="3-发送请求"><a href="#3-发送请求" class="headerlink" title="3.发送请求"></a>3.发送请求</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//如果是get请求，参数为null</span><br><span class="line">xhr.send(null);</span><br><span class="line">//如果是post请求,需要设置请求头</span><br><span class="line">xhr.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line">//post请求参数如果是中文不需要通过encodeURI()进行编码</span><br><span class="line">xhr.send(param);</span><br></pre></td></tr></table></figure></div>
-<h5 id="4-指定回调函数"><a href="#4-指定回调函数" class="headerlink" title="4.指定回调函数"></a>4.指定回调函数</h5><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">xhr.onstatechange = function()&#123;</span><br><span class="line">    if(xhr.readyState == 4)&#123;</span><br><span class="line">        //成功</span><br><span class="line">        if(xhr.status == 200)&#123;</span><br><span class="line">            console.log(xhr.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h3 id="二、xhr-readyState"><a href="#二、xhr-readyState" class="headerlink" title="二、xhr.readyState"></a>二、xhr.readyState</h3><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0 xhr对象初始化</span><br><span class="line">1 发送请求</span><br><span class="line">2 服务器已经返回了数据</span><br><span class="line">3 数据正在解析</span><br><span class="line">4.数据解析完成，可以使用</span><br></pre></td></tr></table></figure></div>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -692,7 +688,7 @@
   <div class="widget-box">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li></ul>
     </div>
   </div>
 
@@ -704,6 +700,10 @@
       <ul>
         
           <li>
+            <a href="/2019/01/29/CSS3实现动态切割轮播图/">CSS3实现动态切割轮播图</a>
+          </li>
+        
+          <li>
             <a href="/2019/01/26/css3实现小黄人/">css3实现小黄人</a>
           </li>
         
@@ -713,10 +713,6 @@
         
           <li>
             <a href="/2019/01/21/散列表碰撞问题解决之线性探测法/">散列表碰撞问题解决之线性探测法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/20/散列/">散列</a>
           </li>
         
           <li>

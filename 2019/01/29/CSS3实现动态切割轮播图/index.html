@@ -13,16 +13,16 @@
   <meta name="description" content="CSS3实现动态切割轮播图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS3实现动态切割轮播图">
-<meta property="og:url" content="http://yoursite.com/2018/02/01/CSS3实现动态切割轮播图/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/01/29/CSS3实现动态切割轮播图/index.html">
 <meta property="og:site_name" content="Smalllitchi">
 <meta property="og:description" content="CSS3实现动态切割轮播图">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2018/02/01/CSS3实现动态切割轮播图/CSS3实现动态切割轮播图/lunbotu.gif">
-<meta property="og:updated_time" content="2019-03-17T08:23:50.798Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/29/CSS3实现动态切割轮播图/CSS3实现动态切割轮播图/icon_down.png">
+<meta property="og:updated_time" content="2019-03-17T08:41:44.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3实现动态切割轮播图">
 <meta name="twitter:description" content="CSS3实现动态切割轮播图">
-<meta name="twitter:image" content="http://yoursite.com/2018/02/01/CSS3实现动态切割轮播图/CSS3实现动态切割轮播图/lunbotu.gif">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/29/CSS3实现动态切割轮播图/CSS3实现动态切割轮播图/icon_down.png">
   
     <link rel="alternate" href="/atom.xml" title="Smalllitchi" type="application/atom+xml">
   
@@ -68,8 +68,8 @@
     </header>
   
   <div class="article-meta">
-    <a href="/2018/02/01/CSS3实现动态切割轮播图/" class="article-date">
-  <time datetime="2018-01-31T16:00:00.000Z" itemprop="datePublished">2018-02-01</time>
+    <a href="/2019/01/29/CSS3实现动态切割轮播图/" class="article-date">
+  <time datetime="2019-01-28T16:00:00.000Z" itemprop="datePublished">2019-01-29</time>
 </a>
     
   <div class="article-category">
@@ -95,7 +95,7 @@
 <p>【js代码】</p>
 <div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> index=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> flag=<span class="literal">true</span>;</span><br><span class="line">  $(<span class="string">".next"</span>).on(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(flag==<span class="literal">true</span>)&#123;</span><br><span class="line">          <span class="comment">//保证每次点击只执行一个动画</span></span><br><span class="line">          flag=<span class="literal">false</span>;</span><br><span class="line">          index--;</span><br><span class="line">          $(<span class="string">"li"</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params">key,ele</span>) </span>&#123;</span><br><span class="line">              <span class="comment">//为不同的li元素设置不同的动画延迟时间</span></span><br><span class="line">              $(<span class="keyword">this</span>).css(&#123;</span><br><span class="line">                  <span class="string">"transform"</span>:<span class="string">"rotateX("</span>+(index*<span class="number">90</span>)+<span class="string">"deg)"</span>,</span><br><span class="line">                  <span class="string">"transition-delay"</span>:(key*<span class="number">0.2</span>)+<span class="string">"s"</span></span><br><span class="line"></span><br><span class="line">              &#125;);</span><br><span class="line">          &#125;);</span><br><span class="line">          setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">              flag=<span class="literal">true</span>;</span><br><span class="line">          &#125;,<span class="number">1000</span>)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line">  $(<span class="string">".last"</span>).on(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(flag==<span class="literal">true</span>)&#123;</span><br><span class="line">          flag=<span class="literal">false</span>;</span><br><span class="line">          index++;</span><br><span class="line">          $(<span class="string">"li"</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params">key,ele</span>) </span>&#123;</span><br><span class="line">              $(<span class="keyword">this</span>).css(&#123;</span><br><span class="line">                  <span class="string">"transform"</span>:<span class="string">"rotateX("</span>+(index*<span class="number">90</span>)+<span class="string">"deg)"</span>,</span><br><span class="line">                  <span class="string">"transition-delay"</span>:(key*<span class="number">0.2</span>)+<span class="string">"s"</span></span><br><span class="line"></span><br><span class="line">              &#125;);</span><br><span class="line">          &#125;);</span><br><span class="line">          setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">              flag=<span class="literal">true</span>;</span><br><span class="line">          &#125;,<span class="number">1000</span>)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></div>
 <p>【效果图】</p>
-<p><img src="CSS3实现动态切割轮播图\lunbotu.gif" alt="lunbotu"></p>
+<p><img src="CSS3实现动态切割轮播图\icon_down.png" alt="lunbotu"></p>
 
       
     </div>
@@ -110,17 +110,13 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2018/04/20/十进制转任意进制/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            十进制转任意进制
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
+    
+      <a href="/2019/01/26/css3实现小黄人/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">css3实现小黄人</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
     
   </div>
 </nav>
@@ -182,7 +178,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li></ul>
     </div>
   </div>
 
@@ -194,6 +190,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/01/29/CSS3实现动态切割轮播图/">CSS3实现动态切割轮播图</a>
+          </li>
+        
+          <li>
             <a href="/2019/01/26/css3实现小黄人/">css3实现小黄人</a>
           </li>
         
@@ -203,10 +203,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/01/21/散列表碰撞问题解决之线性探测法/">散列表碰撞问题解决之线性探测法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/20/散列/">散列</a>
           </li>
         
           <li>
