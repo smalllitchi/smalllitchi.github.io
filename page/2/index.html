@@ -314,47 +314,6 @@
 </article>
 
   
-    <article id="post-双向链表" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/06/双向链表/">双向链表</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2018/09/06/双向链表/" class="article-date">
-  <time datetime="2018-09-05T16:00:00.000Z" itemprop="datePublished">2018-09-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/数据结构与算法/">数据结构与算法</a>
-  </div>
-
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-doorframe" itemprop="articleBody">
-      
-        <p>##### </p>
-<h1 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">//节点</span><br><span class="line">function Node(ele) &#123;</span><br><span class="line">    this.element=ele;</span><br><span class="line">    this.prev=null;</span><br><span class="line">    this.next=null;</span><br><span class="line">&#125;</span><br><span class="line">//双向链表</span><br><span class="line">function LList() &#123;</span><br><span class="line">    this.head=new Node(&apos;head&apos;);</span><br><span class="line">&#125;</span><br><span class="line">//查找节点</span><br><span class="line">LList.prototype.find=function (ele) &#123;</span><br><span class="line">    var current=this.head;</span><br><span class="line">    while (current.element!==ele)&#123;</span><br><span class="line">        current=current.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return current;</span><br><span class="line">&#125;;</span><br><span class="line">//插入节点</span><br><span class="line">LList.prototype.insert=function (newElement,item) &#123;</span><br><span class="line">    var newNode=new Node(newElement);</span><br><span class="line">    var current=this.find(item);</span><br><span class="line">    newNode.next=current.next;</span><br><span class="line">    newNode.prev=current;</span><br><span class="line">    current.next=newNode;</span><br><span class="line">&#125;;</span><br><span class="line">//删除节点</span><br><span class="line">LList.prototype.remove=function (ele) &#123;</span><br><span class="line">    var current=this.find(ele);</span><br><span class="line">    if(current.next!==null)&#123;</span><br><span class="line">        current.prev.next=current.next;</span><br><span class="line">        current.next.prev=current.prev;</span><br><span class="line">        current.prev=null;</span><br><span class="line">        current.next=null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">//显示链表中的所有元素</span><br><span class="line">LList.prototype.display=function () &#123;</span><br><span class="line">    var current=this.head;</span><br><span class="line">    var str=&quot;&quot;;</span><br><span class="line">    while (current.next!==null)&#123;</span><br><span class="line">        str+=current.next.element;</span><br><span class="line">        current=current.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var cities=new LList();</span><br><span class="line">cities.insert(&apos;conway&apos;,&apos;head&apos;);</span><br><span class="line">cities.insert(&apos;RusseLLville&apos;,&apos;conway&apos;);</span><br><span class="line">cities.insert(&apos;Carlisle&apos;,&apos;RusseLLville&apos;);</span><br><span class="line">cities.insert(&apos;Alma&apos;,&apos;Carlisle&apos;);</span><br><span class="line">console.log(cities.display());</span><br><span class="line">cities.remove(&apos;Carlisle&apos;);</span><br><span class="line">console.log(cities.display());</span><br></pre></td></tr></table></figure></div>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
     <article id="post-存储数据与应用程序缓存" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -404,6 +363,47 @@
 <h3 id="三、应用程序缓存"><a href="#三、应用程序缓存" class="headerlink" title="三、应用程序缓存"></a>三、应用程序缓存</h3><p>使用应用程序缓存可以有选择性地缓存一些数据，即使在断网的情况下，用户也能够看到界面</p>
 <div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/1.jpg"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/2.jpg"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/3.jpg"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/5.jpg"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
 <div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">CACHE MANIFEST</span><br><span class="line">#上面一句必写，且应放在开头第一句</span><br><span class="line">#后面是注释</span><br><span class="line"></span><br><span class="line">#需要缓存的文件清单列表</span><br><span class="line">CACHE:</span><br><span class="line"></span><br><span class="line">../images/1.jpg</span><br><span class="line">../images/5.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#每一次都需要向服务器请求的文件清单列表</span><br><span class="line">NETWORK:</span><br><span class="line"></span><br><span class="line">../images/2.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#当文件不存在时，替代文件列表</span><br><span class="line">FALLBACK:</span><br><span class="line">../images/3.jpg ../images/6.jpg</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-双向链表" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/06/双向链表/">双向链表</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2018/09/06/双向链表/" class="article-date">
+  <time datetime="2018-09-05T16:00:00.000Z" itemprop="datePublished">2018-09-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据结构与算法/">数据结构与算法</a>
+  </div>
+
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <p>##### </p>
+<h1 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h1><div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">//节点</span><br><span class="line">function Node(ele) &#123;</span><br><span class="line">    this.element=ele;</span><br><span class="line">    this.prev=null;</span><br><span class="line">    this.next=null;</span><br><span class="line">&#125;</span><br><span class="line">//双向链表</span><br><span class="line">function LList() &#123;</span><br><span class="line">    this.head=new Node(&apos;head&apos;);</span><br><span class="line">&#125;</span><br><span class="line">//查找节点</span><br><span class="line">LList.prototype.find=function (ele) &#123;</span><br><span class="line">    var current=this.head;</span><br><span class="line">    while (current.element!==ele)&#123;</span><br><span class="line">        current=current.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return current;</span><br><span class="line">&#125;;</span><br><span class="line">//插入节点</span><br><span class="line">LList.prototype.insert=function (newElement,item) &#123;</span><br><span class="line">    var newNode=new Node(newElement);</span><br><span class="line">    var current=this.find(item);</span><br><span class="line">    newNode.next=current.next;</span><br><span class="line">    newNode.prev=current;</span><br><span class="line">    current.next=newNode;</span><br><span class="line">&#125;;</span><br><span class="line">//删除节点</span><br><span class="line">LList.prototype.remove=function (ele) &#123;</span><br><span class="line">    var current=this.find(ele);</span><br><span class="line">    if(current.next!==null)&#123;</span><br><span class="line">        current.prev.next=current.next;</span><br><span class="line">        current.next.prev=current.prev;</span><br><span class="line">        current.prev=null;</span><br><span class="line">        current.next=null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">//显示链表中的所有元素</span><br><span class="line">LList.prototype.display=function () &#123;</span><br><span class="line">    var current=this.head;</span><br><span class="line">    var str=&quot;&quot;;</span><br><span class="line">    while (current.next!==null)&#123;</span><br><span class="line">        str+=current.next.element;</span><br><span class="line">        current=current.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var cities=new LList();</span><br><span class="line">cities.insert(&apos;conway&apos;,&apos;head&apos;);</span><br><span class="line">cities.insert(&apos;RusseLLville&apos;,&apos;conway&apos;);</span><br><span class="line">cities.insert(&apos;Carlisle&apos;,&apos;RusseLLville&apos;);</span><br><span class="line">cities.insert(&apos;Alma&apos;,&apos;Carlisle&apos;);</span><br><span class="line">console.log(cities.display());</span><br><span class="line">cities.remove(&apos;Carlisle&apos;);</span><br><span class="line">console.log(cities.display());</span><br></pre></td></tr></table></figure></div>
+
       
     </div>
     
@@ -716,7 +716,7 @@
           </li>
         
           <li>
-            <a href="/2019/01/20/散列表碰撞问题解决之开链法/">散列表碰撞问题解决之开链法</a>
+            <a href="/2019/01/20/散列/">散列</a>
           </li>
         
       </ul>
